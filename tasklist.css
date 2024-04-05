@@ -1,0 +1,74 @@
+body {
+    background-color: #f0f0f0;
+}
+.containerWidth {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.topTask {
+    display: flex;
+    justify-content: space-between;
+}
+.h1 {
+    font-weight: 900;
+}
+.cssButton {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+}
+.add-link {
+    color: white;
+    text-decoration: none;
+}
+.add-link:hover {
+    color: inherit;
+}
+.containerTop {
+    margin-top: 30px;
+}
+.card{
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    float: left;
+}
+.task-column {
+    width: 30%;
+}
+.priority-column {
+    width: 20%;
+}
+.text-status-column {
+    width: 20%;
+}
+.icon-status-column {
+    width: 10%;
+}
+.edit-column, .delete-column {
+    width: 10%;
+}
+.card-button {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+}
+.colorHigh {
+    color: red;
+}
+.colorMedium {
+    color: orange;
+}
+.colorLow {
+    color: green;
+}
