@@ -1,0 +1,29 @@
+.add-link {
+    color: white;
+    text-decoration: none;
+}
+.add-link:hover {
+    color: inherit;
+}
+.canNgang {
+    display: flex;
+}
+.nutAdd {
+    float: right;
+}
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.containerWidth {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.boVien {
+    border-radius: 10px;
+}
+.widthButton {
+    width: 80px;
+}

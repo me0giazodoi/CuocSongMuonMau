@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="addtask.css">
+</head>
+
+<body>
+    <div class="containerWidth">
+        <h1>Add Task</h1>
+        <form>
+            <div class="mb-3">
+                <label for="task" class="form-label">Task</label>
+                <input type="text" class="form-control boVien" id="task" placeholder="Type your task here...">
+            </div>
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priority</label>
+            </div>
+            <div class="canNgang">
+                <div class="mb-3">
+                    <input type="radio" id="priorityLow" name="priority" value="low">
+                    <label for="priorityLow" class="priority btn btn-outline-danger boVien widthButton">High</label>
+                </div>
+                <div class="mb-3">
+                    <input type="radio" id="priorityMedium" name="priority" value="medium">
+                    <label for="priorityMedium" class="priority btn btn-outline-warning boVien widthButton">Medium</label>
+                </div>
+                <div class="mb-3">
+                    <input type="radio" id="priorityHigh" name="priority" value="high">
+                    <label for="priorityHigh" class="priority btn btn-outline-success boVien widthButton">Low</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary nutAdd boVien widthButton"><a href="tasklist.html"
+                    class="add-link">Add</a></button>
+        </form>
+    </div>
+    <script>
+        // Lấy tất cả các radio button
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        // Lặp qua từng radio button
+        radioButtons.forEach(function (radioButton) {
+            // Thêm sự kiện 'click'
+            radioButton.addEventListener('click', function () {
+                // Lấy nhãn (label) tương ứng với radio button được chọn
+                const label = document.querySelector('label[for="' + radioButton.id + '"]');
+
+                // Kiểm tra xem radio button có được chọn không
+                if (radioButton.checked) {
+                    // Nếu được chọn, thêm class 'active' vào nhãn
+                    label.classList.add('active');
+                } else {
+                    // Nếu không được chọn, loại bỏ class 'active' khỏi nhãn
+                    label.classList.remove('active');
+                }
+
+                // Lặp qua từng radio button lại một lần nữa
+                radioButtons.forEach(function (otherRadioButton) {
+                    // Nếu radio button không phải là radio button được chọn, loại bỏ class 'active' khỏi nhãn tương ứng
+                    if (otherRadioButton !== radioButton) {
+                        const otherLabel = document.querySelector('label[for="' + otherRadioButton.id + '"]');
+                        otherLabel.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
