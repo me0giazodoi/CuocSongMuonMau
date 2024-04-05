@@ -1,3 +1,6 @@
+body {
+    background-color: #f0f0f0;
+}
 .add-link {
     color: white;
     text-decoration: none;
@@ -22,8 +25,20 @@ input[type="radio"] {
     margin-top: 30px;
 }
 .boVien {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .widthButton {
-    width: 80px;
+    width: 85px;
+}
+.topTask{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+.xButton {
+    color: black;
+    text-decoration: none;
+}
+.xButton:hover {
+    color: inherit;
 }
