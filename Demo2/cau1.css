@@ -8,7 +8,6 @@
 .navigation ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
 }
 
 .navigation li {
@@ -21,9 +20,14 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin-right: -10px;
 }
 
 .navigation li a:hover {
     background-color: #0056b3;
 }
 
+.line {
+    border-right: solid 1px white;
+    padding-right: 20px;
+}
